@@ -1,0 +1,567 @@
+{
+  "_meta": {
+    "plugin_version": "2.1.0",
+    "site": "https://www.eazydogtraining.com/",
+    "evidence_source": "Page source analysis of mascot.html, home.html, zetland.html, camperdown.html, marricillive.html, newtoen.html, alexenderia.html, puppyschool.html, dogtrainign.html",
+    "last_updated": "2026-10-16",
+    "warning": "Rules marked enabled:false are disabled by default. Enable only after staging verification."
+  },
+  "style_rules": {
+    "learndash_quiz_front_css": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms (LearnDash 5.2.2)",
+      "source_url_pattern": "/wp-content/plugins/sfwd-lms/themes/legacy/templates/learndash_quiz_front.min.css",
+      "pages_found_on": ["mascot", "zetland", "camperdown", "marricillive", "newtoen", "alexenderia", "home"],
+      "pages_needed_on": ["sfwd-quiz post type pages only"],
+      "evidence": "Observed in page source on all marketing landing pages. No quiz elements present on these pages.",
+      "deferred_by_airlift": true
+    },
+    "learndash_style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms (LearnDash 5.2.2)",
+      "source_url_pattern": "/wp-content/plugins/sfwd-lms/assets/css/style.min.css",
+      "pages_found_on": ["all marketing pages"],
+      "pages_needed_on": ["LearnDash course/lesson/topic pages"],
+      "evidence": "learndash_style loaded on puppy school landing pages with no LearnDash content.",
+      "deferred_by_airlift": true
+    },
+    "learndash": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms (LearnDash 5.2.2)",
+      "source_url_pattern": "/wp-content/plugins/sfwd-lms/src/assets/dist/css/styles.css",
+      "pages_found_on": ["all marketing pages"],
+      "pages_needed_on": ["LearnDash interactive pages"],
+      "evidence": "LearnDash core styles loaded on marketing pages.",
+      "deferred_by_airlift": true
+    },
+    "sfwd_front_css": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "source_url_pattern": "/wp-content/plugins/sfwd-lms/assets/css/front.min.css",
+      "evidence": "sfwd front CSS on all marketing pages",
+      "deferred_by_airlift": true
+    },
+    "jquery-dropdown-css": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Dropdown CSS not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash_pager_css": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Pagination CSS not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash_template_style_css": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Template CSS not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash_lesson_video": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Lesson video CSS not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash-admin-bar": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page_and_not_logged_in",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Admin bar CSS only relevant for logged-in LearnDash users",
+      "deferred_by_airlift": true
+    },
+    "learndash-course-grid-skin-grid": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Course grid skins not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash-course-grid-pagination": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Pagination CSS not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash-course-grid-filter": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Course filter CSS not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "learndash-course-grid-card-grid-1": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "Grid cards not used on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "uncannyowl-learndash-toolkit-free": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "Uncanny LearnDash Toolkit",
+      "evidence": "Toolkit CSS on marketing pages with no LearnDash components",
+      "deferred_by_airlift": true
+    },
+    "oceanwp-learndash": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP Theme",
+      "evidence": "OceanWP LearnDash theme styles on marketing pages",
+      "deferred_by_airlift": true
+    },
+    "sumosubs-blocks-integration": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "SUMO Subscriptions 17.7.0",
+      "source_url_pattern": "/wp-content/plugins/sumosubscriptions/assets/blocks/frontend/index.css",
+      "evidence": "Loaded on puppy school pages; no subscription block content present"
+    },
+    "sumosubs-frontend": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "SUMO Subscriptions 17.7.0",
+      "source_url_pattern": "/wp-content/plugins/sumosubscriptions/assets/css/frontend.css",
+      "evidence": "Loaded on all pages without subscription content"
+    },
+    "jquery-ui-style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page_and_not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": false,
+      "source_plugin": "SUMO Subscriptions",
+      "evidence": "jQuery UI styles; only needed on calendar datepicker pages"
+    },
+    "uap_public_style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_affiliate_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "Ultimate Affiliate Pro",
+      "source_url_pattern": "/wp-content/plugins/ultimate-affiliate/assets/css/main_public.min.css",
+      "evidence": "Loaded on all marketing pages without affiliate dashboards"
+    },
+    "uap_templates": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_affiliate_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "Ultimate Affiliate Pro",
+      "source_url_pattern": "/wp-content/plugins/ultimate-affiliate/assets/css/templates.min.css",
+      "evidence": "Loaded on all marketing pages without affiliate dashboards"
+    },
+    "dashicons": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_logged_in",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WordPress Core",
+      "evidence": "Admin dashicons loaded for anonymous visitors; saving 59KB CSS"
+    },
+    "oceanwp-woocommerce": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "WooCommerce theme styles on marketing pages"
+    },
+    "oceanwp-woo-star-font": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "WooCommerce star ratings on marketing pages"
+    },
+    "oceanwp-woo-quick-view": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "Quick view modal not needed on non-shop pages"
+    },
+    "oceanwp-woo-mini-cart": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "WooCommerce mini-cart styles not needed on non-shop pages"
+    },
+    "woocommerce-layout": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "WooCommerce layout styles not needed on non-shop pages"
+    },
+    "woocommerce-smallscreen": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "WooCommerce smallscreen styles not needed on non-shop pages"
+    },
+    "woocommerce-general": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "WooCommerce general styles not needed on non-shop pages"
+    }
+  },
+  "script_rules": {
+    "learndash": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms",
+      "evidence": "LearnDash script; only relevant on course grid pages"
+    },
+    "uncannyowl-learndash-toolkit-free": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "Uncanny LearnDash Toolkit",
+      "evidence": "Toolkit JS not needed on marketing pages"
+    },
+    "uap-public-functions": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_affiliate_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "Ultimate Affiliate Pro",
+      "evidence": "Affiliate JS loaded on marketing pages without affiliate dashboards"
+    },
+    "sumosubs-single-product": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "SUMO Subscriptions",
+      "evidence": "Single product JS loaded on non-shop marketing pages"
+    },
+    "sumosubs-checkout": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "SUMO Subscriptions",
+      "evidence": "Subscription checkout JS loaded on non-checkout marketing pages"
+    },
+    "wc-order-attribution": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "WooCommerce order attribution tracking not needed on non-shop marketing pages"
+    },
+    "sourcebuster-js": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "Sourcebuster JS attribution library not needed on non-shop marketing pages"
+    },
+    "oceanwp-woo-mini-cart": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "WooCommerce mini-cart JS loaded on non-shop pages"
+    },
+    "oceanwp-woo-quick-view": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "WooCommerce quick-view JS loaded on non-shop pages"
+    },
+    "oceanwp-woocommerce-custom-features": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "OceanWP 4.2.7",
+      "evidence": "WooCommerce custom features JS loaded on non-shop pages"
+    },
+    "woocommerce": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "Core WooCommerce script loaded on non-shop pages"
+    },
+    "wc-cart-fragments": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "Cart fragments AJAX polling not needed on non-shop pages"
+    },
+    "wc-add-to-cart": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "Add to cart script on non-shop pages"
+    },
+    "wc-add-to-cart-variation": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "WooCommerce",
+      "evidence": "WooCommerce variation script not needed on marketing pages"
+    },
+    "widget-woocommerce-menu-cart": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_woo_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "Elementor Pro",
+      "evidence": "Elementor menu cart styles not needed on non-shop pages"
+    },
+    "learndash-course-grid-skin-grid": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms (LearnDash 5.2.2)",
+      "evidence": "LearnDash course grid script not needed on marketing pages"
+    },
+    "learndash-course-grid-elementor-compatibility": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_learndash_page",
+      "risk": "low",
+      "enabled_by_default": true,
+      "source_plugin": "sfwd-lms (LearnDash 5.2.2)",
+      "evidence": "LearnDash Elementor compatibility script not needed on marketing pages"
+    },
+    "mec-frontend-style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC frontend style not needed on non-event pages (saves 75KB CSS)"
+    },
+    "mec-select2-style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC select2 style not needed on non-event pages"
+    },
+    "mec-font-icons": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC font icons not needed on non-event pages"
+    },
+    "mec-tooltip-style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC tooltip style not needed on non-event pages"
+    },
+    "mec-general-calendar-style": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC general calendar style not needed on non-event pages"
+    },
+    "featherlight": {
+      "action": "dequeue",
+      "type": "style",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC featherlight lightbox style not needed on non-event pages"
+    },
+    "mec-frontend-script": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC frontend script not needed on non-event pages"
+    },
+    "mec-events-script": {
+      "action": "dequeue",
+      "type": "script",
+      "condition": "not_mec_page",
+      "risk": "medium",
+      "enabled_by_default": true,
+      "source_plugin": "Modern Events Calendar",
+      "evidence": "MEC events script not needed on non-event pages"
+    }
+  },
+  "protected_handles": {
+    "elementor-frontend": "Never dequeue — core Elementor rendering",
+    "elementor-frontend-css": "Never dequeue — core Elementor CSS",
+    "elementor-pro-frontend": "Never dequeue — Pro features",
+    "oceanwp-style": "Never dequeue — theme base CSS",
+    "child-style": "Never dequeue — child theme CSS",
+    "jquery": "Never dequeue — required by many features",
+    "quform-css": "Never dequeue — forms active on landing pages",
+    "mec-frontend-style-css": "Never dequeue on MEC pages — booking calendar CSS",
+    "brb-public-main-css-css": "Never dequeue — Business Reviews Bundle used on marketing pages"
+  },
+  "lcp_findings": {
+    "homepage": {
+      "mobile_lcp": {
+        "element": "img",
+        "alt": "Home Page LCP",
+        "src": "sdsdfsf.avif",
+        "dimensions": "600x621",
+        "fetchpriority": "high (set by AirLift)",
+        "loading": "eager (set by AirLift)",
+        "preloaded": true
+      },
+      "known_issues": {
+        "logo_fetchpriority_conflict": "Logo also has fetchpriority=high — competes with hero. Fixed by LCPPriorityManager."
+      }
+    },
+    "puppy_school_mascot": {
+      "mobile_lcp": {
+        "element": "img",
+        "src": "puppy-school-mascot-mobile-1.avif",
+        "dimensions": "300x298",
+        "media": "max-width: 480px",
+        "fetchpriority": "high (AirLift)",
+        "loading": "eager (AirLift)",
+        "preloaded": true
+      },
+      "desktop_lcp": {
+        "element": "img",
+        "src": "puppy-school-mascot-768x762-2_11zon-1.avif",
+        "dimensions": "768x762",
+        "media": "min-width: 481px",
+        "fetchpriority": "high (AirLift)",
+        "loading": "eager (AirLift)",
+        "preloaded": true
+      }
+    }
+  }
+}
+

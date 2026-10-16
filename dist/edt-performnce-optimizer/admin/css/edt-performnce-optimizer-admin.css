@@ -1,0 +1,154 @@
+/* EDT Performance Optimizer — Admin Styles */
+
+.edt-perf-wrap h1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 24px;
+}
+
+.edt-version {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    background: #f0f0f1;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+/* Status cards */
+.edt-perf-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.edt-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 4px solid #72aee6;
+    border-radius: 4px;
+    padding: 16px 20px;
+}
+
+.edt-card h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #3c434a;
+}
+
+.edt-card p {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.edt-card-success { border-top-color: #00a32a; }
+.edt-card-warning  { border-top-color: #dba617; }
+.edt-card-danger   { border-top-color: #d63638; }
+
+.edt-status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.edt-status-badge.success  { background: #d7edde; color: #1a6937; }
+.edt-status-badge.warning  { background: #fcf9e8; color: #7a5600; }
+.edt-status-badge.danger   { background: #fce8e8; color: #932422; }
+
+/* Sections */
+.edt-perf-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.edt-perf-section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Notices */
+.edt-notices {
+    background: #d7edde;
+    border-left: 4px solid #00a32a;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+}
+
+.edt-notices p { margin: 4px 0; font-size: 13px; }
+
+/* Badges */
+.edt-badge-green {
+    background: #d7edde;
+    color: #1a6937;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.edt-badge-gray {
+    background: #f0f0f1;
+    color: #666;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Owns list */
+.edt-owns-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.edt-owns-list li {
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+/* Asset rules table */
+.edt-rules-table td, .edt-rules-table th {
+    vertical-align: middle;
+}
+
+.edt-type-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.edt-type-style  { background: #e8f0fe; color: #1a57c3; }
+.edt-type-script { background: #fef7e0; color: #7a5600; }
+
+/* Toggle */
+.edt-toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Danger button */
+.edt-danger-btn {
+    background: #d63638 !important;
+    border-color: #a42628 !important;
+    color: #fff !important;
+}
+
+.edt-danger-btn:hover {
+    background: #a42628 !important;
+}
